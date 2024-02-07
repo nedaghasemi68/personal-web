@@ -1,0 +1,149 @@
+/* برای موبایل */
+@media only screen and (max-width: 600px) {
+    .project {
+        width: 100%; /* تغییر عرض باکس‌ها به 100% */
+    }
+}
+
+/* برای تبلت و دسکتاپ */
+@media only screen and (min-width: 601px) {
+    .project {
+        width: 50%; /* تغییر عرض باکس‌ها به 50% */
+    }
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #3c853e; /* تغییر رنگ پس‌زمینه هدر به رنگ سبز */
+    color: #fff; /* تنظیم رنگ متن هدر به سفید */
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #f4f4f4;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+nav ul li a:hover {
+    color: #57c15d; /* تغییر رنگ پس‌زمینه nav هنگامی که موس روی آن هاور شود */
+}
+
+.search-box {
+    margin-right: auto;
+    margin-left: 10px;
+    position: relative; /* تنظیم موقعیت عنصر به عنوان parent برای دکمه */
+}
+
+#searchInput {
+    padding: 10px;
+    border: 2px solid green; /* تنظیم کادر با رنگ سبز */
+    border-radius: 20px; /* گوشه‌های گرد کادر */
+    outline: none; /* حذف حاشیه دور کادر */
+    font-size: 1em;
+    width: 200px; /* تنظیم عرض */
+    transition: border-color 0.3s; /* اضافه کردن انیمیشن به تغییرات کادر */
+}
+
+#searchInput:focus {
+    border-color: rgb(26, 155, 71); /* تغییر رنگ کادر هنگام فوکوس */
+}
+
+.search-icon {
+    position: absolute; /* تنظیم موقعیت به صورت مطلق */
+    right: 10px; /* تنظیم فاصله از راست */
+    top: 50%; /* تنظیم موقعیت عمودی */
+    transform: translateY(-50%); /* تنظیم موقعیت عمودی با توجه به اندازه عنصر */
+    color: gray;
+    cursor: pointer;
+}
+
+.search-icon:hover {
+    color: rgb(31, 174, 69);
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+li {
+    display: inline;
+    margin-right: 20px;
+
+}
+
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a.active {
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+}
+
+main .project {
+    flex-grow: 1; /* تنظیم اندازه رشد باکس‌ها برای پر کردن فضای خالی */
+    flex-shrink: 1; /* تنظیم اندازه کوچک شدن باکس‌ها برای جلوگیری از اشباع فضا */
+    flex-basis: calc(25% - 30px); /* تعیین اندازه پایه‌ای برای باکس‌ها با فاصله‌ی 20px بین هر باکس */
+    max-width: calc(25% - 30px); /* تعیین حداکثر عرض برای باکس‌ها با فاصله‌ی 20px بین هر باکس */
+    height: 100px; /* کاهش ارتفاع باکس‌ها */
+    width: 100px; /* کاهش عرض باکس‌ها */
+    margin: 10px; /* اعمال فاصله‌ی 10px بین هر باکس */
+    padding: 10px; /* اعمال فاصله‌ی داخلی 10px برای باکس‌ها */
+    background-color: #f9f9f9; /* تنظیم رنگ پس‌زمینه باکس‌ها */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* اعمال سایه به باکس‌ها */
+    text-align: center; /* متن در وسط باکس */
+    border-radius: 10px; /* اعمال گوشه‌های گرد به باکس‌ها */
+    transition: transform 0.3s ease; /* اضافه کردن ترانزیشن به باکس‌ها */;
+
+}
+
+main .project h2 {
+    color: #4CAF50;
+    font-size: 20px;
+
+}
+main .project p {
+    margin-top: 5px;
+    color: #777;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.project {
+    border: 1px solid #ccc;
+    display: none;
+}
+
+.project.show {
+    display: block;
+}
+main .project:hover {
+    transform: scale(1.05); 
+}
+#filter {
+    font-size: 1.2em; /* تنظیم اندازه فونت بزرگتر */
+    font-weight: bold; /* تنظیم وزن فونت به bold */
+    cursor: pointer; /* تغییر نمایش ماوس به نمادهایی مانند دکمه */
+}
+#filter:hover {
+    color: rgb(86, 174, 95); /* تغییر رنگ متن هنگام هوور با ماوس */
+}
